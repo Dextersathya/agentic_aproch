@@ -1,0 +1,611 @@
+Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.llms import Ollama`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+🚀 Multi-LLM Agentic Flow Demo
+==================================================
+Prerequisites:
+1. Ollama should be running (ollama serve)
+2. Model should be pulled (ollama pull llama3.2:3b)
+3. Required packages: langchain langgraph ollama
+==================================================
+🧪 Testing Multi-LLM Agent...
+c:\Users\surya\Desktop\Nova\agentic.py:46: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
+  self.model1 = Ollama(
+
+📊 LangGraph Workflow Structure:
+========================================
+START
+  ↓
+MODEL1 (llama3.2:3b)
+  ↓
+MODEL2 (llama3.2:3b)
+  ↓
+END
+========================================
+
+🔍 Node Details:
+• START: Initialize workflow
+• MODEL1: First LLM processes original query
+• MODEL2: Second LLM refines using MODEL1 output
+• END: Return combined results
+
+🔗 Edge Connections:
+• START → MODEL1
+• MODEL1 → MODEL2
+• MODEL2 → END
+
+🔢 Graph Statistics:
+• Nodes: 5
+• Edges: 4
+• Flow: Linear sequence (no conditionals)
+📊 Graph diagram saved as multi_llm_workflow.png
+
+📝 Test Query 1: Explain the concept of quantum computing
+--------------------------------------------------
+🚀 Starting multi-LLM workflow...
+🤖 Model 1 processing...
+✅ Model 1 completed: Quantum computing is a revolutionary technology that uses the principles of quantum mechanics to per...
+🤖 Model 2 processing...
+✅ Model 2 completed: **Enhanced Analysis: Quantum Computing Fundamentals**
+
+Quantum computing is a revolutionary technolo...
+✅ Success!
+🎯 Final Result:
+
+=== COLLABORATIVE AI RESPONSE ===
+
+🤖 Model 1 Analysis:
+Quantum computing is a revolutionary technology that uses the principles of quantum mechanics to perform calculations and operations on data. It has the potential to solve complex problems that are currently unsolvable or require an unfeasible amount of time to solve using classical computers.
+
+**Classical Computing vs. Quantum Computing**
+
+Classical computers use bits, which can have a value of either 0 or 1. They process information using logical operations, such as AND, OR, and NOT, which are based on binary arithmetic. In contrast, quantum computers use qubits (quantum bits), which can exist in multiple states simultaneously, represented by a combination of 0, 1, and both at the same time.
+
+**Key Principles of Quantum Computing**
+
+Quantum computing is based on the following principles:
+
+1. **Superposition**: Qubits can exist in multiple states simultaneously, allowing for parallel processing of large amounts of data.
+2. **Entanglement**: Qubits can be connected in a way that their properties are correlated, enabling the manipulation of multiple qubits as a single unit.
+3. **Quantum Measurement**: When a qubit is measured, its state collapses to one of the possible values (0 or 1).
+4. **Quantum Interference**: The superposition principle allows for interference between different states, which can be exploited to solve certain problems more efficiently.
+
+**How Quantum Computing Works**
+
+Quantum computing involves several steps:
+
+1. **Preparation**: Qubits are prepared in a specific state using quantum gates (quantum circuits).
+2. **Processing**: Quantum algorithms are applied to the qubits, exploiting the principles of superposition and entanglement.
+3. **Measurement**: The qubits are measured, causing their states to collapse.
+4. **Result Analysis**: The results are analyzed to obtain the solution or answer.
+
+**Types of Quantum Computing**
+
+There are several types of quantum computing:
+
+1. **Gate-based Quantum Computing**: This is the most common type, which uses quantum gates to manipulate qubits.
+2. **Adiabatic Quantum Computing**: This type uses a different approach, where the energy levels of the system change gradually over time.
+3. **Analog Quantum Computing**: This type uses continuous variables, such as phase angles or amplitudes, instead of discrete values.
+
+**Applications of Quantum Computing**
+
+Quantum computing has many potential applications:
+
+1. **Cryptography**: Quantum computers can break certain encryption algorithms, but they also provide new ways to create unbreakable ones.
+2. **Optimization**: Quantum computers can solve complex optimization problems more efficiently than classical computers.
+3. **Simulation**: Quantum computers can simulate the behavior of molecules and other complex systems, leading to breakthroughs in chemistry, materials science, and pharmaceutical research.
+4. **Machine Learning**: Quantum computers can speed up certain machine learning algorithms, enabling faster training times.
+
+**Challenges and Limitations**
+
+Quantum computing is still a developing field, and there are several challenges and limitations:
+
+1. **Noise and Error Correction**: Quantum systems are prone to errors due to the fragile nature of qubits.
+2. **Scalability**: Currently, most quantum computers are small-scale and need to be scaled up to solve larger problems.
+3. **Control and Calibration**: Maintaining control over the quantum system is crucial for reliable operation.
+
+In summary, quantum computing has the potential to revolutionize many fields by solving complex problems more efficiently than classical computers. However, significant technical challenges need to be addressed before it can become a practical reality.
+
+🤖 Model 2 Refinement:
+**Enhanced Analysis: Quantum Computing Fundamentals**
+
+Quantum computing is a revolutionary technology that leverages the principles of quantum mechanics to perform calculations and operations on data, offering unprecedented computational power for solving complex problems. This analysis delves deeper into the fundamental concepts, types of quantum computing, applications, challenges, and limitations.
+
+**Classical Computing vs. Quantum Computing: A Deeper Dive**
+
+The contrast between classical computing and quantum computing is rooted in their underlying architectures:
+
+1. **Bits vs. Qubits**: Classical computers rely on bits, which can exist in one of two states (0 or 1). In contrast, qubits are quantum bits that can represent a combination of 0, 1, and both simultaneously.
+2. **Logic Gates vs. Quantum Gates**: Classical computers use logical operations like AND, OR, and NOT, whereas quantum computers employ quantum gates to manipulate qubits.
+
+**Key Principles of Quantum Computing: An Expanded Analysis**
+
+Quantum computing is built upon the following principles:
+
+1. **Superposition**: Qubits can exist in multiple states (0, 1, and both) simultaneously, allowing for parallel processing of large datasets.
+2. **Entanglement**: Qubits can be connected in a way that their properties are correlated, enabling the manipulation of multiple qubits as a single unit.
+3. **Quantum Measurement**: When a qubit is measured, its state collapses to one of the possible values (0 or 1), leading to wave function collapse.
+4. **Quantum Interference**: The superposition principle allows for interference between different states, which can be exploited to solve certain problems more efficiently.
+
+**How Quantum Computing Works: A Detailed Overview**
+
+The quantum computing process involves several key steps:
+
+1. **Preparation**: Qubits are prepared in a specific state using quantum gates (quantum circuits).
+2. **Processing**: Quantum algorithms are applied to the qubits, exploiting the principles of superposition and entanglement.
+3. **Measurement**: The qubits are measured, causing their states to collapse.
+4. **Result Analysis**: The results are analyzed to obtain the solution or answer.
+
+**Types of Quantum Computing: An Overview**
+
+There are several types of quantum computing:
+
+1. **Gate-based Quantum Computing**: This is the most common type, which uses quantum gates to manipulate qubits.
+2. **Adiabatic Quantum Computing**: This type uses a different approach, where the energy levels of the system change gradually over time.
+3. **Analog Quantum Computing**: This type uses continuous variables, such as phase angles or amplitudes, instead of discrete values.
+
+**Applications of Quantum Computing: Expanded Insights**
+
+Quantum computing has numerous applications across various fields:
+
+1. **Cryptography**: Quantum computers can break certain encryption algorithms, but they also provide new ways to create unbreakable ones.
+2. **Optimization**: Quantum computers can solve complex optimization problems more efficiently than classical computers.
+3. **Simulation**: Quantum computers can simulate the behavior of molecules and other complex systems, leading to breakthroughs in chemistry, materials science, and pharmaceutical research.
+4. **Machine Learning**: Quantum computers can speed up certain machine learning algorithms, enabling faster training times.
+
+**Challenges and Limitations: A Closer Look**
+
+Quantum computing faces several challenges and limitations:
+
+1. **Noise and Error Correction**: Quantum systems are prone to errors due to the fragile nature of qubits.
+2. **Scalability**: Currently, most quantum computers are small-scale and need to be scaled up to solve larger problems.
+3. **Control and Calibration**: Maintaining control over the quantum system is crucial for reliable operation.
+4. **Quantum Error Correction Codes**: Developing robust quantum error correction codes that can correct errors in quantum computations remains an active area of research.
+
+**Future Directions: Opportunities and Challenges**
+
+As quantum computing continues to evolve, several future directions are emerging:
+
+1. **Quantum-Classical Hybrids**: Integrating classical computers with quantum computers to leverage their respective strengths.
+2. **Quantum-Secure Communication**: Developing secure communication protocols that utilize quantum mechanics for encryption.
+3. **Quantum-Inspired Optimization Algorithms**: Developing optimization algorithms inspired by quantum mechanics to tackle complex problems.
+
+In conclusion, quantum computing is a rapidly evolving field that offers unprecedented computational power and potential applications across various fields. However, significant technical challenges need to be addressed before it can become a practical reality.
+
+=== SYNTHESIZED RESULT ===
+Based on the collaborative analysis above, here's the comprehensive response:
+**Enhanced Analysis: Quantum Computing Fundamentals**
+
+Quantum computing is a revolutionary technology that leverages the principles of quantum mechanics to perform calculations and operations on data, offering unprecedented computational power for solving complex problems. This analysis delves deeper into the fundamental concepts, types of quantum computing, applications, challenges, and limitations.
+
+**Classical Computing vs. Quantum Computing: A Deeper Dive**
+
+The contrast between classical computing and quantum computing is rooted in their underlying architectures:
+
+1. **Bits vs. Qubits**: Classical computers rely on bits, which can exist in one of two states (0 or 1). In contrast, qubits are quantum bits that can represent a combination of 0, 1, and both simultaneously.
+2. **Logic Gates vs. Quantum Gates**: Classical computers use logical operations like AND, OR, and NOT, whereas quantum computers employ quantum gates to manipulate qubits.
+
+**Key Principles of Quantum Computing: An Expanded Analysis**
+
+Quantum computing is built upon the following principles:
+
+1. **Superposition**: Qubits can exist in multiple states (0, 1, and both) simultaneously, allowing for parallel processing of large datasets.
+2. **Entanglement**: Qubits can be connected in a way that their properties are correlated, enabling the manipulation of multiple qubits as a single unit.
+3. **Quantum Measurement**: When a qubit is measured, its state collapses to one of the possible values (0 or 1), leading to wave function collapse.
+4. **Quantum Interference**: The superposition principle allows for interference between different states, which can be exploited to solve certain problems more efficiently.
+
+**How Quantum Computing Works: A Detailed Overview**
+
+The quantum computing process involves several key steps:
+
+1. **Preparation**: Qubits are prepared in a specific state using quantum gates (quantum circuits).
+2. **Processing**: Quantum algorithms are applied to the qubits, exploiting the principles of superposition and entanglement.
+3. **Measurement**: The qubits are measured, causing their states to collapse.
+4. **Result Analysis**: The results are analyzed to obtain the solution or answer.
+
+**Types of Quantum Computing: An Overview**
+
+There are several types of quantum computing:
+
+1. **Gate-based Quantum Computing**: This is the most common type, which uses quantum gates to manipulate qubits.
+2. **Adiabatic Quantum Computing**: This type uses a different approach, where the energy levels of the system change gradually over time.
+3. **Analog Quantum Computing**: This type uses continuous variables, such as phase angles or amplitudes, instead of discrete values.
+
+**Applications of Quantum Computing: Expanded Insights**
+
+Quantum computing has numerous applications across various fields:
+
+1. **Cryptography**: Quantum computers can break certain encryption algorithms, but they also provide new ways to create unbreakable ones.
+2. **Optimization**: Quantum computers can solve complex optimization problems more efficiently than classical computers.
+3. **Simulation**: Quantum computers can simulate the behavior of molecules and other complex systems, leading to breakthroughs in chemistry, materials science, and pharmaceutical research.
+4. **Machine Learning**: Quantum computers can speed up certain machine learning algorithms, enabling faster training times.
+
+**Challenges and Limitations: A Closer Look**
+
+Quantum computing faces several challenges and limitations:
+
+1. **Noise and Error Correction**: Quantum systems are prone to errors due to the fragile nature of qubits.
+2. **Scalability**: Currently, most quantum computers are small-scale and need to be scaled up to solve larger problems.
+3. **Control and Calibration**: Maintaining control over the quantum system is crucial for reliable operation.
+4. **Quantum Error Correction Codes**: Developing robust quantum error correction codes that can correct errors in quantum computations remains an active area of research.
+
+**Future Directions: Opportunities and Challenges**
+
+As quantum computing continues to evolve, several future directions are emerging:
+
+1. **Quantum-Classical Hybrids**: Integrating classical computers with quantum computers to leverage their respective strengths.
+2. **Quantum-Secure Communication**: Developing secure communication protocols that utilize quantum mechanics for encryption.
+3. **Quantum-Inspired Optimization Algorithms**: Developing optimization algorithms inspired by quantum mechanics to tackle complex problems.
+
+In conclusion, quantum computing is a rapidly evolving field that offers unprecedented computational power and potential applications across various fields. However, significant technical challenges need to be addressed before it can become a practical reality.
+
+
+📝 Test Query 2: What are the benefits and challenges of renewable energy?
+--------------------------------------------------
+🚀 Starting multi-LLM workflow...
+🤖 Model 1 processing...
+✅ Model 1 completed: Renewable energy has numerous benefits, but also some challenges that need to be addressed. Here are...
+🤖 Model 2 processing...
+✅ Model 2 completed: **Refined Analysis: Benefits and Challenges of Renewable Energy**
+
+Renewable energy has emerged as a...
+✅ Success!
+🎯 Final Result:
+
+=== COLLABORATIVE AI RESPONSE ===
+
+🤖 Model 1 Analysis:
+Renewable energy has numerous benefits, but also some challenges that need to be addressed. Here are some of the main advantages and disadvantages of renewable energy: 
+
+Benefits:
+
+1. **Reduced greenhouse gas emissions**: Renewable energy sources like solar, wind, and hydroelectric power do not emit carbon dioxide or other greenhouse gases, contributing less to climate change.
+2. **Sustainable and renewable resource**: Solar and wind energy are available in abundance, making them a sustainable source of energy for the future.
+3. **Energy independence**: Renewable energy can reduce reliance on imported fossil fuels, enhancing energy security and reducing trade deficits.
+4. **Lower operational costs**: The cost of generating electricity from renewable sources is often lower than traditional fossil fuel-based power plants.
+5. **Job creation and economic growth**: The renewable energy industry is creating new job opportunities and driving economic growth in local communities.
+6. **Improved air quality**: Renewable energy can reduce air pollution, improving public health and environmental quality.
+
+Challenges:
+
+1. **Intermittency**: Solar and wind energy are intermittent sources of power, meaning they are not always available when needed.
+2. **High upfront costs**: While the cost of renewable energy technologies has decreased over time, the initial investment required to install these systems can still be substantial.
+3. **Energy storage**: The lack of efficient and affordable energy storage solutions makes it difficult to store excess energy generated by intermittent sources for later use.
+4. **Grid integration**: Integrating renewable energy into the existing grid infrastructure can be complex and require significant upgrades.
+5. **Policy and regulation**: The transition to a low-carbon economy requires supportive policies, regulations, and incentives to promote the adoption of renewable energy.
+6. **Public acceptance**: Some communities may resist the installation of renewable energy infrastructure due to concerns about aesthetics, noise, or wildlife impact.  
+
+To overcome these challenges, researchers are developing new technologies, such as:
+
+1. **Advanced solar panels** with improved efficiency and lower costs
+2. **Wind turbines** with larger rotors and more efficient designs
+3. **Energy storage systems**, like batteries and pumped hydro storage
+4. **Smart grids** that can manage the integration of renewable energy sources
+5. **Policy innovations**, such as carbon pricing, feed-in tariffs, and tax credits
+
+By addressing these challenges and continuing to innovate, we can accelerate the transition to a low-carbon economy powered by renewable energy.
+
+🤖 Model 2 Refinement:
+**Refined Analysis: Benefits and Challenges of Renewable Energy**
+
+Renewable energy has emerged as a critical component in the global quest to mitigate climate change, reduce greenhouse gas emissions, and ensure a sustainable future. The benefits of renewable energy are numerous, but so are the challenges that must be addressed. In this refined analysis, we will delve deeper into the advantages and disadvantages of renewable energy, exploring new technologies, policy innovations, and the role of international cooperation in accelerating the transition to a low-carbon economy.
+
+**Benefits:**
+
+1. **Reduced greenhouse gas emissions**: Renewable energy sources like solar, wind, hydroelectric power, and geothermal energy do not emit carbon dioxide or other greenhouse gases, contributing less to climate change.
+2. **Sustainable and renewable resource**: Solar and wind energy are available in abundance, making them a sustainable source of energy for the future.
+3. **Energy independence**: Renewable energy can reduce reliance on imported fossil fuels, enhancing energy security and reducing trade deficits.
+4. **Lower operational costs**: The cost of generating electricity from renewable sources is often lower than traditional fossil fuel-based power plants.
+5. **Job creation and economic growth**: The renewable energy industry is creating new job opportunities and driving economic growth in local communities.
+6. **Improved air quality**: Renewable energy can reduce air pollution, improving public health and environmental quality.
+
+**Challenges:**
+
+1. **Intermittency**: Solar and wind energy are intermittent sources of power, meaning they are not always available when needed.
+2. **High upfront costs**: While the cost of renewable energy technologies has decreased over time, the initial investment required to install these systems can still be substantial.
+3. **Energy storage**: The lack of efficient and affordable energy storage solutions makes it difficult to store excess energy generated by intermittent sources for later use.
+4. **Grid integration**: Integrating renewable energy into the existing grid infrastructure can be complex and require significant upgrades.
+5. **Policy and regulation**: The transition to a low-carbon economy requires supportive policies, regulations, and incentives to promote the adoption of renewable energy.
+6. **Public acceptance**: Some communities may resist the installation of renewable energy infrastructure due to concerns about aesthetics, noise, or wildlife impact.  
+
+**New Technologies:**
+
+To overcome these challenges, researchers are developing new technologies that can improve the efficiency, affordability, and scalability of renewable energy systems:  
+
+1. **Advanced solar panels**: Bifacial solar panels with improved efficiency and lower costs are being developed.
+2. **Wind turbines**: Larger rotors and more efficient designs are increasing wind energy production while reducing costs.
+3. **Energy storage systems**: Advancements in battery technology and pumped hydro storage solutions are enhancing the ability to store excess energy generated by intermittent sources.
+4. **Smart grids**: Advanced grid management systems can optimize the integration of renewable energy sources, ensuring a stable and reliable energy supply.
+5. **Hybrid power plants**: Combining different renewable energy sources with traditional fossil fuel-based power plants can improve efficiency and reduce costs.       
+
+**Policy Innovations:**
+
+To facilitate the transition to a low-carbon economy, policy innovations are essential:
+
+1. **Carbon pricing**: Implementing carbon taxes or cap-and-trade systems can create financial incentives for renewable energy adoption.
+2. **Feed-in tariffs**: Governments can offer feed-in tariffs to encourage the installation of renewable energy systems and ensure a stable revenue stream for developers.
+3. **Tax credits**: Providing tax credits for renewable energy investments can reduce upfront costs and increase adoption rates.
+4. **Renewable portfolio standards**: Setting renewable portfolio standards can ensure that a percentage of electricity generated comes from renewable sources, driving market growth and innovation.
+
+**International Cooperation:**
+
+Global cooperation is crucial to accelerate the transition to a low-carbon economy powered by renewable energy:
+
+1. **International agreements**: Global agreements like the Paris Agreement and the Sustainable Development Goals (SDGs) provide a framework for countries to work together on climate change mitigation.
+2. **Knowledge sharing**: International collaboration can facilitate the sharing of best practices, technologies, and expertise in renewable energy development and deployment.
+3. **Financing**: Multilateral financing institutions and green bonds can provide access to capital for developing countries and small-scale renewable energy projects. 
+
+By addressing these challenges and continuing to innovate, we can accelerate the transition to a low-carbon economy powered by renewable energy. International cooperation, policy innovations, and technological advancements are essential for achieving this goal and ensuring a sustainable future for generations to come.
+
+=== SYNTHESIZED RESULT ===
+Based on the collaborative analysis above, here's the comprehensive response:
+**Refined Analysis: Benefits and Challenges of Renewable Energy**
+
+Renewable energy has emerged as a critical component in the global quest to mitigate climate change, reduce greenhouse gas emissions, and ensure a sustainable future. The benefits of renewable energy are numerous, but so are the challenges that must be addressed. In this refined analysis, we will delve deeper into the advantages and disadvantages of renewable energy, exploring new technologies, policy innovations, and the role of international cooperation in accelerating the transition to a low-carbon economy.
+
+**Benefits:**
+
+1. **Reduced greenhouse gas emissions**: Renewable energy sources like solar, wind, hydroelectric power, and geothermal energy do not emit carbon dioxide or other greenhouse gases, contributing less to climate change.
+2. **Sustainable and renewable resource**: Solar and wind energy are available in abundance, making them a sustainable source of energy for the future.
+3. **Energy independence**: Renewable energy can reduce reliance on imported fossil fuels, enhancing energy security and reducing trade deficits.
+4. **Lower operational costs**: The cost of generating electricity from renewable sources is often lower than traditional fossil fuel-based power plants.
+5. **Job creation and economic growth**: The renewable energy industry is creating new job opportunities and driving economic growth in local communities.
+6. **Improved air quality**: Renewable energy can reduce air pollution, improving public health and environmental quality.
+
+**Challenges:**
+
+1. **Intermittency**: Solar and wind energy are intermittent sources of power, meaning they are not always available when needed.
+2. **High upfront costs**: While the cost of renewable energy technologies has decreased over time, the initial investment required to install these systems can still be substantial.
+3. **Energy storage**: The lack of efficient and affordable energy storage solutions makes it difficult to store excess energy generated by intermittent sources for later use.
+4. **Grid integration**: Integrating renewable energy into the existing grid infrastructure can be complex and require significant upgrades.
+5. **Policy and regulation**: The transition to a low-carbon economy requires supportive policies, regulations, and incentives to promote the adoption of renewable energy.
+6. **Public acceptance**: Some communities may resist the installation of renewable energy infrastructure due to concerns about aesthetics, noise, or wildlife impact.  
+
+**New Technologies:**
+
+To overcome these challenges, researchers are developing new technologies that can improve the efficiency, affordability, and scalability of renewable energy systems:  
+
+1. **Advanced solar panels**: Bifacial solar panels with improved efficiency and lower costs are being developed.
+2. **Wind turbines**: Larger rotors and more efficient designs are increasing wind energy production while reducing costs.
+3. **Energy storage systems**: Advancements in battery technology and pumped hydro storage solutions are enhancing the ability to store excess energy generated by intermittent sources.
+4. **Smart grids**: Advanced grid management systems can optimize the integration of renewable energy sources, ensuring a stable and reliable energy supply.
+5. **Hybrid power plants**: Combining different renewable energy sources with traditional fossil fuel-based power plants can improve efficiency and reduce costs.       
+
+**Policy Innovations:**
+
+To facilitate the transition to a low-carbon economy, policy innovations are essential:
+
+1. **Carbon pricing**: Implementing carbon taxes or cap-and-trade systems can create financial incentives for renewable energy adoption.
+2. **Feed-in tariffs**: Governments can offer feed-in tariffs to encourage the installation of renewable energy systems and ensure a stable revenue stream for developers.
+3. **Tax credits**: Providing tax credits for renewable energy investments can reduce upfront costs and increase adoption rates.
+4. **Renewable portfolio standards**: Setting renewable portfolio standards can ensure that a percentage of electricity generated comes from renewable sources, driving market growth and innovation.
+
+**International Cooperation:**
+
+Global cooperation is crucial to accelerate the transition to a low-carbon economy powered by renewable energy:
+
+1. **International agreements**: Global agreements like the Paris Agreement and the Sustainable Development Goals (SDGs) provide a framework for countries to work together on climate change mitigation.
+2. **Knowledge sharing**: International collaboration can facilitate the sharing of best practices, technologies, and expertise in renewable energy development and deployment.
+3. **Financing**: Multilateral financing institutions and green bonds can provide access to capital for developing countries and small-scale renewable energy projects. 
+
+By addressing these challenges and continuing to innovate, we can accelerate the transition to a low-carbon economy powered by renewable energy. International cooperation, policy innovations, and technological advancements are essential for achieving this goal and ensuring a sustainable future for generations to come.
+
+
+📝 Test Query 3: How can AI be used in healthcare?
+--------------------------------------------------
+🚀 Starting multi-LLM workflow...
+🤖 Model 1 processing...
+✅ Model 1 completed: AI can be used in various ways in healthcare, including:
+
+1. **Diagnostic assistance**: AI algorithm...
+🤖 Model 2 processing...
+✅ Model 2 completed: Building on Model 1's analysis, here are some additional insights and refinements:
+
+**Enhanced Diagn...
+✅ Success!
+🎯 Final Result:
+
+=== COLLABORATIVE AI RESPONSE ===
+
+🤖 Model 1 Analysis:
+AI can be used in various ways in healthcare, including:
+
+1. **Diagnostic assistance**: AI algorithms can analyze medical images such as X-rays, CT scans, and MRIs to help diagnose conditions like cancer, diabetic retinopathy, and cardiovascular disease.
+2. **Predictive analytics**: AI can analyze large amounts of patient data to predict the likelihood of hospital readmission, complications, or mortality.
+3. **Personalized medicine**: AI can help tailor treatment plans to individual patients based on their genetic profiles, medical histories, and lifestyle factors.      
+4. **Clinical decision support**: AI-powered systems can provide healthcare professionals with real-time guidance on diagnosis, treatment options, and medication regimens.
+5. **Robot-assisted surgery**: AI can be used to control robotic surgical systems, allowing for more precise and minimally invasive procedures.
+6. **Chatbots and virtual assistants**: AI-powered chatbots can help patients manage chronic conditions, provide health education, and answer questions about medications and treatments.
+7. **Population health management**: AI can analyze large datasets to identify trends and patterns in population health, enabling healthcare systems to develop targeted interventions and improve outcomes.
+8. **Medical research**: AI can help accelerate medical research by analyzing large amounts of data, identifying patterns, and suggesting new hypotheses for investigation.
+9. **Clinical trials**: AI can be used to design clinical trials, predict patient outcomes, and identify potential biases in trial results.
+10. **Patient engagement**: AI-powered platforms can engage patients in their care through personalized messaging, reminders, and education.
+
+Benefits of using AI in healthcare include:
+
+1. **Improved accuracy**: AI algorithms can analyze vast amounts of data quickly and accurately, reducing errors and improving diagnosis.
+2. **Enhanced patient experience**: AI-powered chatbots and virtual assistants can provide 24/7 support and improve patient engagement.
+3. **Increased efficiency**: AI can automate routine tasks, freeing up healthcare professionals to focus on more complex and high-value tasks.
+4. **Reduced costs**: AI can help reduce healthcare costs by identifying opportunities for cost savings, streamlining clinical workflows, and improving population health outcomes.
+
+However, there are also challenges and limitations to using AI in healthcare, including:
+
+1. **Data quality and availability**: AI algorithms require high-quality data to produce accurate results.
+2. **Regulatory frameworks**: There is a need for clear regulatory frameworks to govern the development and use of AI in healthcare.
+3. **Cybersecurity**: AI systems can be vulnerable to cyber threats, compromising patient data and confidentiality.
+4. **Bias and fairness**: AI algorithms can perpetuate biases and disparities if not designed and trained with diverse datasets.
+
+Overall, AI has the potential to revolutionize healthcare by improving diagnosis, treatment, and patient engagement, but it is essential to address the challenges and limitations associated with its use in this field.
+
+🤖 Model 2 Refinement:
+Building on Model 1's analysis, here are some additional insights and refinements:
+
+**Enhanced Diagnostic Capabilities**
+
+1. **Image analysis**: AI can be used to analyze medical images such as mammograms, ultrasounds, and MRIs to detect abnormalities and diagnose conditions like breast cancer and cardiovascular disease.
+2. **Point-of-care diagnostics**: AI-powered point-of-care devices can provide quick and accurate diagnoses for conditions like diabetes and blood disorders.
+3. **Genomic analysis**: AI can be used to analyze genomic data to identify genetic variants associated with diseases and develop personalized treatment plans.
+
+**Predictive Analytics**
+
+1. **Severe illness prediction**: AI algorithms can predict the likelihood of severe illness or mortality in patients with critical illnesses, enabling healthcare professionals to provide more targeted interventions.
+2. **Readmission prediction**: AI can be used to predict which patients are at high risk of hospital readmission, allowing for early intervention and prevention strategies.
+3. **Disease progression modeling**: AI can be used to model disease progression and identify potential biomarkers for diagnosis and treatment.
+
+**Personalized Medicine**
+
+1. **Genomic medicine**: AI can be used to analyze genomic data to develop personalized treatment plans based on an individual's genetic profile.
+2. **Precision medicine**: AI can help tailor treatment plans to specific patient populations, taking into account factors like lifestyle, environmental exposures, and medical history.
+3. **Targeted therapy**: AI can be used to identify potential targets for cancer therapy and predict which patients are most likely to respond to a particular treatment.
+
+**Clinical Decision Support**
+
+1. **Real-time clinical decision support**: AI-powered systems can provide healthcare professionals with real-time guidance on diagnosis, treatment options, and medication regimens.
+2. **Decision analytics**: AI can be used to analyze large datasets to identify the best course of action for patients with complex conditions.
+3. **Clinical guidelines**: AI can help update clinical guidelines based on the latest evidence, ensuring that healthcare professionals have access to the most up-to-date information.
+
+**Robot-Assisted Surgery**
+
+1. **Robotic-assisted minimally invasive procedures**: AI can be used to control robotic surgical systems, enabling more precise and minimally invasive procedures.     
+2. **Telepresence surgery**: AI can enable telepresence surgery, allowing surgeons to remotely perform complex procedures.
+3. **Surgical simulation**: AI can be used to create realistic simulations of surgical procedures, enabling training and practice in a safe and controlled environment. 
+
+**Patient Engagement**
+
+1. **Personalized patient messaging**: AI-powered platforms can provide patients with personalized messages about their condition, treatment options, and medication regimens.
+2. **Health coaching**: AI can be used to offer personalized health coaching and education, helping patients achieve their wellness goals.
+3. **Virtual reality therapy**: AI can be used to create immersive virtual reality experiences that help patients overcome phobias or anxieties.
+
+**Benefits of Using AI in Healthcare**
+
+1. **Improved patient outcomes**: AI can help improve patient outcomes by providing more accurate diagnoses, targeted treatment plans, and personalized care.
+2. **Increased efficiency**: AI can automate routine tasks, freeing up healthcare professionals to focus on more complex and high-value tasks.
+3. **Reduced costs**: AI can help reduce healthcare costs by identifying opportunities for cost savings, streamlining clinical workflows, and improving population health outcomes.
+
+**Challenges and Limitations**
+
+1. **Data quality and availability**: AI algorithms require high-quality data to produce accurate results.
+2. **Regulatory frameworks**: There is a need for clear regulatory frameworks to govern the development and use of AI in healthcare.
+3. **Cybersecurity**: AI systems can be vulnerable to cyber threats, compromising patient data and confidentiality.
+4. **Bias and fairness**: AI algorithms can perpetuate biases and disparities if not designed and trained with diverse datasets.
+
+**Future Directions**
+
+1. **Integration with wearables and IoT devices**: AI can be used to analyze data from wearables and IoT devices to provide more comprehensive insights into patient health and behavior.
+2. **Human-AI collaboration**: AI can be used to enhance human decision-making in healthcare, providing real-time guidance and support for healthcare professionals.    
+3. **Explainable AI**: There is a growing need for explainable AI, which provides transparent and interpretable explanations of AI decisions and recommendations.       
+
+Overall, the use of AI in healthcare has the potential to revolutionize patient care and outcomes, but it is essential to address the challenges and limitations associated with its use in this field.
+
+=== SYNTHESIZED RESULT ===
+Based on the collaborative analysis above, here's the comprehensive response:
+Building on Model 1's analysis, here are some additional insights and refinements:
+
+**Enhanced Diagnostic Capabilities**
+
+1. **Image analysis**: AI can be used to analyze medical images such as mammograms, ultrasounds, and MRIs to detect abnormalities and diagnose conditions like breast cancer and cardiovascular disease.
+2. **Point-of-care diagnostics**: AI-powered point-of-care devices can provide quick and accurate diagnoses for conditions like diabetes and blood disorders.
+3. **Genomic analysis**: AI can be used to analyze genomic data to identify genetic variants associated with diseases and develop personalized treatment plans.
+
+**Predictive Analytics**
+
+1. **Severe illness prediction**: AI algorithms can predict the likelihood of severe illness or mortality in patients with critical illnesses, enabling healthcare professionals to provide more targeted interventions.
+2. **Readmission prediction**: AI can be used to predict which patients are at high risk of hospital readmission, allowing for early intervention and prevention strategies.
+3. **Disease progression modeling**: AI can be used to model disease progression and identify potential biomarkers for diagnosis and treatment.
+
+**Personalized Medicine**
+
+1. **Genomic medicine**: AI can be used to analyze genomic data to develop personalized treatment plans based on an individual's genetic profile.
+2. **Precision medicine**: AI can help tailor treatment plans to specific patient populations, taking into account factors like lifestyle, environmental exposures, and medical history.
+3. **Targeted therapy**: AI can be used to identify potential targets for cancer therapy and predict which patients are most likely to respond to a particular treatment.
+
+**Clinical Decision Support**
+
+1. **Real-time clinical decision support**: AI-powered systems can provide healthcare professionals with real-time guidance on diagnosis, treatment options, and medication regimens.
+2. **Decision analytics**: AI can be used to analyze large datasets to identify the best course of action for patients with complex conditions.
+3. **Clinical guidelines**: AI can help update clinical guidelines based on the latest evidence, ensuring that healthcare professionals have access to the most up-to-date information.
+
+**Robot-Assisted Surgery**
+
+1. **Robotic-assisted minimally invasive procedures**: AI can be used to control robotic surgical systems, enabling more precise and minimally invasive procedures.     
+2. **Telepresence surgery**: AI can enable telepresence surgery, allowing surgeons to remotely perform complex procedures.
+3. **Surgical simulation**: AI can be used to create realistic simulations of surgical procedures, enabling training and practice in a safe and controlled environment. 
+
+**Patient Engagement**
+
+1. **Personalized patient messaging**: AI-powered platforms can provide patients with personalized messages about their condition, treatment options, and medication regimens.
+2. **Health coaching**: AI can be used to offer personalized health coaching and education, helping patients achieve their wellness goals.
+3. **Virtual reality therapy**: AI can be used to create immersive virtual reality experiences that help patients overcome phobias or anxieties.
+
+**Benefits of Using AI in Healthcare**
+
+1. **Improved patient outcomes**: AI can help improve patient outcomes by providing more accurate diagnoses, targeted treatment plans, and personalized care.
+2. **Increased efficiency**: AI can automate routine tasks, freeing up healthcare professionals to focus on more complex and high-value tasks.
+3. **Reduced costs**: AI can help reduce healthcare costs by identifying opportunities for cost savings, streamlining clinical workflows, and improving population health outcomes.
+
+**Challenges and Limitations**
+
+1. **Data quality and availability**: AI algorithms require high-quality data to produce accurate results.
+2. **Regulatory frameworks**: There is a need for clear regulatory frameworks to govern the development and use of AI in healthcare.
+3. **Cybersecurity**: AI systems can be vulnerable to cyber threats, compromising patient data and confidentiality.
+4. **Bias and fairness**: AI algorithms can perpetuate biases and disparities if not designed and trained with diverse datasets.
+
+**Future Directions**
+
+1. **Integration with wearables and IoT devices**: AI can be used to analyze data from wearables and IoT devices to provide more comprehensive insights into patient health and behavior.
+2. **Human-AI collaboration**: AI can be used to enhance human decision-making in healthcare, providing real-time guidance and support for healthcare professionals.    
+3. **Explainable AI**: There is a growing need for explainable AI, which provides transparent and interpretable explanations of AI decisions and recommendations.       
+
+Overall, the use of AI in healthcare has the potential to revolutionize patient care and outcomes, but it is essential to address the challenges and limitations associated with its use in this field.
+
+
+🗣️ Testing Conversational Multi-LLM Agent...
+
+👤 User: What is machine learning?
+🚀 Starting multi-LLM workflow...
+🤖 Model 1 processing...
+✅ Model 1 completed: Machine learning (ML) is a subset of artificial intelligence (AI) that enables computers to learn fr...
+🤖 Model 2 processing...
+✅ Model 2 completed: **Refined Analysis:**
+
+Machine learning (ML) is a subset of artificial intelligence (AI) that enable...
+🤖 AI: **Refined Analysis:**
+
+Machine learning (ML) is a subset of artificial intelligence (AI) that enables computers to learn from data and improve their performance on a specific task without being explicitly programmed. The goal of ML is to enable machines to make predictions, classify objects, or auto...
+
+👤 User: How does it differ from traditional programming?
+🚀 Starting multi-LLM workflow...
+🤖 Model 1 processing...
+✅ Model 1 completed: **Traditional Programming vs Machine Learning**
+
+Traditional programming involves writing explicit c...
+🤖 Model 2 processing...
+✅ Model 2 completed: **Refining the Analysis**
+
+Building upon Model 1's analysis, let's further explore the differences b...
+🤖 AI: **Refining the Analysis**
+
+Building upon Model 1's analysis, let's further explore the differences between traditional programming and machine learning:
+
+1. **Data-driven approach**: Machine learning relies heavily on data, which is used to train models that can make predictions or take actions with...
+
+👤 User: Can you give me a practical example?
+🚀 Starting multi-LLM workflow...
+🤖 Model 1 processing...
+✅ Model 1 completed: **Practical Example: Image Classification with Machine Learning**
+
+Let's consider a real-world appli...
+🤖 Model 2 processing...
+✅ Model 2 completed: **Refining the Analysis: Practical Example of Image Classification with Machine Learning**
+
+Let's di...
+🤖 AI: **Refining the Analysis: Practical Example of Image Classification with Machine Learning**
+
+Let's dive deeper into the practical example of image classification using machine learning, highlighting key benefits and nuances:
+
+**Dataset and Preprocessing**
+
+To train an accurate model, we need a divers...

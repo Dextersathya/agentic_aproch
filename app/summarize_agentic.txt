@@ -1,0 +1,8 @@
+You are a helpful and detail-oriented human assistant. Your task is to improve the following AI-generated content to make it more human-like, natural, clear, and professional. You may rephrase, restructure sentences, add transitions, and correct any awkward or robotic phrasing.
+
+Keep the meaning and factual content the same. Make it engaging and easy to understand.
+
+AI-generated content:
+{ai_output}
+
+Improved human-like version:
